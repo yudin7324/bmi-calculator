@@ -1,0 +1,79 @@
+@use 'reset';
+@use 'vars' as *;
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-font);
+  height: 100%;
+  background-color: var(--color-white);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1270px;
+  padding: 0 24px;
+
+  @media (min-width: 600px) {
+    padding: 0 80px;
+  }
+}
+
+.text-preset-1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.text-preset-2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.text-preset-3 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.text-preset-4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.21;
+  letter-spacing: -0.05em;
+}
+
+.text-preset-5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.05em;
+}
+
+.text-preset-6-semibold {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-preset-6-regular {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-preset-7-bold {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text-preset-7-regular {
+  font-size: 14px;
+  line-height: 1.5;
+}
