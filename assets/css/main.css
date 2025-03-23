@@ -116,10 +116,105 @@ h1, h2, h3, h4, h5, h6, p {
   --spacing-1800: 144px;
 }
 
+.intro {
+  position: relative;
+  padding: 88px 0 85px 0;
+}
+.intro:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  max-height: 737px;
+  width: 69vw;
+  background: linear-gradient(90deg, rgba(214, 252, 254, 0) 0%, #d6e6fe 100%);
+  border-radius: 0 0 35px 35px;
+}
+.intro__logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--spacing-300);
+}
+.intro__logo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+.intro__wrap {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--spacing-400);
+}
+.intro__content {
+  padding-top: var(--spacing-900);
+}
+.intro__text {
+  margin-top: var(--spacing-400);
+  max-width: 85%;
+}
+
+.calculator {
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+  background: var(--color-white);
+}
+.calculator__messure {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--spacing-300);
+  padding: 0;
+  border: none;
+  margin-top: var(--spacing-400);
+}
+.calculator__messure-custom {
+  position: relative;
+  display: block;
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--color-grey-500);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calculator__messure-custom::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 15px;
+  width: 15px;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-blue-500);
+  border-radius: 50%;
+  opacity: 0;
+}
+.calculator__messure-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-200);
+  cursor: pointer;
+}
+.calculator__messure-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.calculator__messure-input:checked ~ .calculator__messure-custom {
+  background-color: var(--color-blue-100);
+  border: none;
+}
+.calculator__messure-input:checked ~ .calculator__messure-custom::before {
+  opacity: 1;
+}
+
 .main {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   color: var(--color-font);
   height: 100%;
   background-color: var(--color-white);
