@@ -2,6 +2,7 @@
 @use 'vars' as *;
 @use 'intro';
 @use 'calculator';
+@use 'about';
 
 .main {
   display: flex;
@@ -18,22 +19,34 @@
   padding: 0 24px;
 
   @media (min-width: 600px) {
-    padding: 0 80px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: 991px) {
+    padding: 0 55px;
   }
 }
 
 .text-preset-1 {
   font-weight: 600;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 1.1;
   letter-spacing: -0.05em;
+
+  @media (min-width: 991px) {
+    font-size: 64px;
+  }
 }
 
 .text-preset-2 {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1.1;
   letter-spacing: -0.05em;
+
+  @media (min-width: 991px) {
+    font-size: 48px;
+  }
 }
 
 .text-preset-3 {

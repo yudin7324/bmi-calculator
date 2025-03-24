@@ -118,7 +118,17 @@ h1, h2, h3, h4, h5, h6, p {
 
 .intro {
   position: relative;
-  padding: 88px 0 85px 0;
+  padding: 32px 0 61px 0;
+}
+@media (min-width: 600px) {
+  .intro {
+    padding: 32px 0 19px 0;
+  }
+}
+@media (min-width: 991px) {
+  .intro {
+    padding: 88px 0 85px 0;
+  }
 }
 .intro:after {
   content: "";
@@ -127,15 +137,33 @@ h1, h2, h3, h4, h5, h6, p {
   top: 0;
   bottom: 0;
   z-index: 1;
-  max-height: 737px;
-  width: 69vw;
+  max-height: 640px;
+  width: 100vw;
   background: linear-gradient(90deg, rgba(214, 252, 254, 0) 0%, #d6e6fe 100%);
   border-radius: 0 0 35px 35px;
 }
+@media (min-width: 991px) {
+  .intro:after {
+    max-height: 737px;
+    width: 69vw;
+  }
+}
 .intro__logo {
-  width: 64px;
-  height: 64px;
-  margin-bottom: var(--spacing-300);
+  width: 40px;
+  height: 40px;
+  margin: 0 auto var(--spacing-400) auto;
+}
+@media (min-width: 600px) {
+  .intro__logo {
+    margin: 0 auto var(--spacing-500) auto;
+  }
+}
+@media (min-width: 991px) {
+  .intro__logo {
+    width: 64px;
+    height: 64px;
+    margin: 0 0 var(--spacing-300) 0;
+  }
 }
 .intro__logo img {
   object-fit: contain;
@@ -147,15 +175,37 @@ h1, h2, h3, h4, h5, h6, p {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: var(--spacing-400);
+  grid-template-columns: 1fr;
+  row-gap: var(--spacing-400);
+}
+@media (min-width: 600px) {
+  .intro__wrap {
+    row-gap: var(--spacing-500);
+  }
+}
+@media (min-width: 991px) {
+  .intro__wrap {
+    column-gap: var(--spacing-400);
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .intro__content {
-  padding-top: var(--spacing-900);
+  text-align: center;
+}
+@media (min-width: 991px) {
+  .intro__content {
+    text-align: start;
+    padding-top: var(--spacing-900);
+  }
 }
 .intro__text {
-  margin-top: var(--spacing-400);
-  max-width: 85%;
+  margin-top: var(--spacing-300);
+}
+@media (min-width: 991px) {
+  .intro__text {
+    margin-top: var(--spacing-400);
+    max-width: 85%;
+  }
 }
 
 .calculator {
@@ -212,6 +262,91 @@ h1, h2, h3, h4, h5, h6, p {
   opacity: 1;
 }
 
+.about__wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--spacing-600);
+  padding: 64px 0 61px 0;
+}
+@media (min-width: 768px) {
+  .about__wrap {
+    grid-template-columns: 283px 1fr;
+    column-gap: 72px;
+    align-items: center;
+    padding: 88px 0 95px 0;
+  }
+}
+@media (min-width: 1280px) {
+  .about__wrap {
+    grid-template-columns: 564px 1fr;
+    column-gap: 131px;
+    padding: 52px 0 86px 0;
+    align-items: flex-end;
+  }
+  .about__wrap::after {
+    content: "";
+    position: absolute;
+    right: 27px;
+    top: 0;
+    height: 200px;
+    width: 85px;
+    background-image: url("/assets/images/pattern-curved-line-left.svg");
+  }
+}
+.about__image {
+  position: relative;
+  margin-left: -24px;
+  margin-right: -24px;
+}
+@media (min-width: 600px) {
+  .about__image {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+@media (min-width: 768px) {
+  .about__image {
+    height: 411px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .about__image {
+    height: 533px;
+  }
+}
+.about__image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+@media (min-width: 768px) {
+  .about__image-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 435px;
+  }
+}
+@media (min-width: 1280px) {
+  .about__image-container {
+    position: static;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .about__content {
+    padding-bottom: 38px;
+  }
+}
+.about__title {
+  margin-bottom: var(--spacing-400);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -227,22 +362,37 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (min-width: 600px) {
   .container {
-    padding: 0 80px;
+    padding: 0 40px;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    padding: 0 55px;
   }
 }
 
 .text-preset-1 {
   font-weight: 600;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 1.1;
   letter-spacing: -0.05em;
+}
+@media (min-width: 991px) {
+  .text-preset-1 {
+    font-size: 64px;
+  }
 }
 
 .text-preset-2 {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1.1;
   letter-spacing: -0.05em;
+}
+@media (min-width: 991px) {
+  .text-preset-2 {
+    font-size: 48px;
+  }
 }
 
 .text-preset-3 {
