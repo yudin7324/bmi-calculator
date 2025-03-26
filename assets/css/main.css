@@ -437,6 +437,112 @@ h1, h2, h3, h4, h5, h6, p {
   color: var(--color-grey-500);
 }
 
+.limitations {
+  padding: 82px 0 96px 0;
+}
+@media (min-width: 600px) {
+  .limitations {
+    padding: 96px 0;
+  }
+}
+@media (min-width: 991px) {
+  .limitations {
+    padding: 155px 0;
+  }
+}
+.limitations__wrap {
+  position: relative;
+}
+.limitations__heading {
+  text-align: center;
+  margin-bottom: var(--spacing-700);
+}
+@media (min-width: 991px) {
+  .limitations__heading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 48.62%;
+    text-align: start;
+    margin-bottom: 0;
+  }
+}
+.limitations__title {
+  margin-bottom: var(--spacing-400);
+}
+.limitations__grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--spacing-200);
+  justify-content: center;
+}
+@media (min-width: 600px) {
+  .limitations__grid {
+    column-gap: var(--spacing-200);
+    row-gap: var(--spacing-300);
+  }
+}
+@media (min-width: 991px) {
+  .limitations__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 167px)) repeat(2, minmax(auto, 67px)) minmax(auto, 167px) repeat(2, minmax(auto, 67px));
+    column-gap: var(--spacing-400);
+    row-gap: var(--spacing-300);
+  }
+}
+.limitations__item {
+  border-radius: 16px;
+  padding: 24px;
+  background: var(--color-white);
+  box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+}
+@media (min-width: 600px) {
+  .limitations__item {
+    padding: 32px;
+    flex: 0 0 calc(50% - var(--spacing-200));
+  }
+}
+@media (min-width: 991px) {
+  .limitations__item {
+    max-width: 100%;
+  }
+  .limitations__item:nth-child(1) {
+    grid-column: 5/8;
+    grid-row: 1/1;
+  }
+  .limitations__item:nth-child(2) {
+    grid-column: 3/6;
+    grid-row: 2/2;
+  }
+  .limitations__item:nth-child(3) {
+    grid-column: 6/9;
+    grid-row: 2/2;
+  }
+  .limitations__item:nth-child(4) {
+    grid-column: 2/4;
+    grid-row: 3/3;
+  }
+  .limitations__item:nth-child(5) {
+    grid-column: 4/7;
+    grid-row: 3/3;
+  }
+}
+.limitations__item-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200);
+  margin-bottom: var(--spacing-200);
+}
+.limitations__item-icon {
+  width: 32px;
+  height: 32px;
+}
+.limitations__item-icon img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
 .main {
   display: flex;
   flex-direction: column;
