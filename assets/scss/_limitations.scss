@@ -11,6 +11,22 @@
   
   &__wrap {
     position: relative;
+
+    @media (min-width: 991px) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 45%;
+        left: 12%;
+        transform: translateY(-45%);
+        width: 94px;
+        height: 122px;
+        background: url("/assets/images/pattern-curved-line-right.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
   }
 
   &__heading {

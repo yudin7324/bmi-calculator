@@ -292,6 +292,9 @@ h1, h2, h3, h4, h5, h6, p {
     height: 200px;
     width: 85px;
     background-image: url("/assets/images/pattern-curved-line-left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 .about__image {
@@ -452,6 +455,21 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .limitations__wrap {
   position: relative;
+}
+@media (min-width: 991px) {
+  .limitations__wrap::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    transform: translateY(-45%);
+    width: 94px;
+    height: 122px;
+    background: url("/assets/images/pattern-curved-line-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 .limitations__heading {
   text-align: center;
