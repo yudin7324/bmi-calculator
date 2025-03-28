@@ -26,7 +26,7 @@
             </div>
             <div class="calculator">
               <h2 class="calculator__title text-preset-4">Enter your details below</h2>
-              <fieldset class="calculator__messure">
+              <fieldset class="js-messure calculator__messure">
                 <div class="calculator__messure-item">
                   <label class="calculator__messure-label text-preset-6-semibold">
                     <input class="calculator__messure-input" type="radio" name="messure" value="metric" checked>
@@ -42,6 +42,70 @@
                   </label>
                 </div>
               </fieldset>
+
+              <div class="js-metric-fields calculator__fields">
+                <div class="calculator__field">
+                  <label class="calculator__field-label text-preset-7-regular">Height</label>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__field-input" inputmode="numeric" pattern="[0-9]*" id="height">
+                    <span class="calculator__unit text-preset-4">cm</span>
+                  </div>
+                </div>
+
+                <div class="calculator__field">
+                  <label class="calculator__field-label text-preset-7-regular">Weight</label>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__field-input" inputmode="numeric" pattern="[0-9]*" id="weight">
+                    <span class="calculator__unit text-preset-4">kg</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="js-imperial-fields calculator__fields hidden">
+                <div class="calculator__field">
+                  <label class="calculator__field-label text-preset-7-regular">Height</label>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__field-input" inputmode="numeric" pattern="[0-9]*" id="height">
+                    <span class="calculator__unit text-preset-4">ft</span>
+                  </div>
+                </div>
+
+                <div class="calculator__field">
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__field-input" inputmode="numeric" pattern="[0-9]*" id="weight">
+                    <span class="calculator__unit text-preset-4">in</span>
+                  </div>
+                </div>
+
+                <div class="calculator__field">
+                  <label class="calculator__field-label text-preset-7-regular">Weight</label>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__field-input" inputmode="numeric" pattern="[0-9]*" id="weight">
+                    <span class="calculator__unit text-preset-4">st</span>
+                  </div>
+                </div>
+
+                <div class="calculator__field">
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__field-input" inputmode="numeric" pattern="[0-9]*" id="weight">
+                    <span class="calculator__unit text-preset-4">lbs</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calculator__result">
+                <div class="text-preset-4">Welcome!</div>
+                <p class="text-preset-7-regular">Enter your height and weight and you’ll see your BMI result here</p>
+              </div>
+
+              <div class="calculator__result calculator__result--fullfield hidden">
+                <div class="calculator__result-wrap">
+                  <div class="text-preset-6-semibold">Your BMI is...</div>
+                  <div class="text-preset-1">23.4</div>
+                </div>
+                <p class="calculator__result-overview text-preset-7-regular">Your BMI suggests you’re a healthy weight. Your ideal weight is between <span>63.3kgs - 85.2kgs.</span></p>
+              </div>
+                
             </div>
           </div>
         </div>
